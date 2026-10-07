@@ -28,13 +28,13 @@ ORDER BY date;
 -- TOTAL CASES vs POPULATION BY LOCATION --
 
 -- Worldwide
-SELECT location, date, total_cases, population, (total_cases/population) * 100 AS populationinfected_percentage
+SELECT location, date, total_cases, population, (total_cases/population) * 100 AS population_infected_percentage
 FROM dbo.CovidDeaths
 WHERE continent IS NOT NULL
 ORDER BY location, date;
 
 -- Brazil
-SELECT location, date, total_cases, population, (total_cases/population) * 100 AS populationinfected_percentage
+SELECT location, date, total_cases, population, (total_cases/population) * 100 AS population_infected_percentage
 FROM dbo.CovidDeaths
 WHERE location = 'Brazil'
 ORDER BY date;
